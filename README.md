@@ -20,9 +20,39 @@ product based company focuses on selling products while service based companies 
 there is more growth in product based companies.
 example of product based company is google, microsoft, amazon, flipkart,etc.
 example of sservice based company is infosys,wipro.
-
+      
 
 ### Downloaded three softwares:
 1. oracle Vitual code
 2. Microsoft visual C++
 3. ubuntu 24.04.02
+
+# Day-2
+## Booting and its types:
+it refers to yurning on or restarting the computer
+### types:
+Cold boot: when computer is started from complete powered off state.
+Warm Boot:when computer is restarted without turning off.
+ ## Kernel:
+ it is the core of computer os.it has complete control over everything in the system
+  ## Shell:
+  it is the interface between the user and opertating sysytem.
+  ### Types:
+  Command line shell
+  graphic shell.
+  example: bash,ksh,csh.
+  ## Linux file system management:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
