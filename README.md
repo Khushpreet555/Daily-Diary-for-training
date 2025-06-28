@@ -75,22 +75,25 @@ GPT (GUID Partition Table)	Modern scheme that stores partition info using global
 
  # Day3:
  ## File and directory permission:
- chmod (Change mode): It is used to change the access permissions of files and directories.
+ ## chmod (Change mode): It is used to change the access permissions of files and directories.
 
-Some different chmod permission notations are:
-chmod +x filenamet.sh: Gives permission to run the script.
-chmod 444 filename.sh: Changes file to read-only
-chmod 644 filename.sh: give permission only to owner to edit.
+### Some different chmod permission notations are:
+1.chmod +x filenamet.sh: Gives permission to run the script.
+
+2.chmod 444 filename.sh: Changes file to read-only
+
+3.chmod 644 filename.sh: give permission only to owner to edit.
+
 ### Screenshot:
 ![Screenshot 2025-06-28 154213](https://github.com/user-attachments/assets/7714315f-b942-4ead-9a22-6e597b6281fa)
 #### output:
 ![Screenshot 2025-06-28 153816](https://github.com/user-attachments/assets/9719169a-e639-4a85-8445-2308bc003675)
 
-Redirection:
+### Redirection:
 
 It allows user to redirect input and output functionalities to the files or folders.
 
-Types of Redirection:
+### Types of Redirection:
 
 1.Overwrite Redirection (For stdout):
 Redirects the standard output of a command to a file. If the file exists already contain script, it will be overwritten.
@@ -104,7 +107,7 @@ used for input of command to file "<".
 ![Screenshot 2025-06-28 154656](https://github.com/user-attachments/assets/e98c300e-ab64-4f4c-ac9c-7c1f9e8f31de)
 
 
-The pipe is used to combine two or more commands, and in this, the output of one command acts as input to another command.
+### The pipe is used to combine two or more commands, and in this, the output of one command acts as input to another command.
 ![Screenshot 2025-06-28 154837](https://github.com/user-attachments/assets/9a542b78-74e4-4eee-9842-bd1fa73bcf1f)
 ![Screenshot 2025-06-28 154941](https://github.com/user-attachments/assets/922bfed4-c091-40ff-9ea1-7c45189f87b3)
 
