@@ -152,6 +152,8 @@ Houses the BIOS/UEFI firmware for booting and hardware initialization
 Includes slots (PCIe, DIMM), ports (USB, HDMI), and connectors (SATA, ATX power)
 
 Supports onboard components like audio, network, and sometimes graphics
+## Picture :
+![WhatsApp Image 2025-06-30 at 21 57 08_81a206c1](https://github.com/user-attachments/assets/94cdd1fe-b54b-4ec4-975c-a8ba214864f8)
 
 ## 🧩 Key Parts of a Motherboard
 
