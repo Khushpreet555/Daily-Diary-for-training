@@ -452,3 +452,7 @@ Trim the wires into an even line 1⁄2 inch (13 mm) from sheathing
 Insert the wires into the RJ-45 connector.
 Stick the connector into the crimping part of the tool and squeeze twice.
 Remove the cable from the tool and check that all of the pins are down & test the cable.
+## RJ45 Color combination pic:
+![T568B](https://github.com/user-attachments/assets/ce8177b5-fe0c-4479-b0ca-12d94fb7dbff)
+
+
