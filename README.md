@@ -215,16 +215,240 @@ Without cache, the CPU would spend more time idling, waiting for data to arrive 
 | 2. Load Bootloader      | BIOS/UEFI loads the bootloader from the storage device                 |
 | 3. Load OS Kernel       | Bootloader loads the operating system kernel into RAM                  |
 | 4. Initialize OS        | OS sets up drivers, services, and configurations                       |
-| 5. User Login           | System shows login screen or desktop for user interaction       
+| 5. User Login           | System shows login screen or desktop for user interaction              |
+
+# Day5:
+# PC and network troubleshooting
+## Common issues and problems in PC:
+### GPU:
+. Originally developed for handling graphics in video games, GPUs are now used for a wide range of high-performance computing tasks.
+## ⚠️ GPU Issue Symptoms Table
+
+| 🧩 Symptom                         | 🖼️ Description                                                                 | 🔍 Possible Causes                            |
+|----------------------------------|------------------------------------------------------------------------------|-----------------------------------------------|
+| **Screen Artifacts**             | Strange lines, dots, flickering visuals                                     | Overheating, VRAM corruption, GPU failure     |
+| **Driver Crashes**              | Black screen, freezing, auto-restart of display driver                      | Faulty drivers, power instability              |
+| **Overheating**                 | Hot GPU temps, fan noise, thermal shutdown                                  | Dust buildup, poor airflow, old thermal paste |
+| **Low Performance**             | FPS drops, stuttering, lag in games/apps                                    | Thermal throttling, outdated drivers          |
+| **System Won’t Boot**           | No display when GPU is installed                                            | Dead GPU, power supply issues                 |
+| **Fan Not Spinning**            | GPU fans don’t spin even under load                                         | Hardware failure, bad connectors               |
+| **Glitches in Games**           | Missing textures, crashes, strange lighting                                 | Driver issues, GPU memory faults              |
+
+## Partitioning of harddisk
+Partitioning a hard disk means dividing it into separate logical sections (called partitions), each of which behaves like an independent disk. It's useful for organizing data, dual-booting operating systems, and improving backup and recovery workflows.
+
+## ⚙️ Common Causes of a Slow PC
+
+| 🧩 Cause                      | 🖼️ Symptoms                                           | 🛠️ Solution                                      |
+|------------------------------|-------------------------------------------------------|--------------------------------------------------|
+| **Too Many Startup Programs** | Long boot time, slow desktop loading                  | Disable unnecessary startup apps (Task Manager)  |
+| **Insufficient RAM**         | System hangs when multitasking, tabs reload           | Upgrade RAM or close unused programs             |
+| **Old or Failing HDD**       | Long loading times, system stutters                   | Upgrade to SSD or defragment the drive           |
+| **Too Many Background Processes** | Constant high CPU or RAM usage                   | End unnecessary tasks via Task Manager           |
+| **Virus or Malware**         | Random popups, CPU spikes, unknown apps               | Scan with antivirus/malware removal tools        |
+| **Overheating**              | Loud fans, auto shutdowns, thermal throttling         | Clean fans, reapply thermal paste, improve airflow |
+| **Outdated Drivers or OS**   | Device issues, instability, performance drop          | Update drivers and OS regularly                  |
+| **Full Storage**             | File saving errors, laggy apps, disk usage at 100%    | Free up space or move files to external drives   |
+| **Browser Overload**         | Tabs crash or freeze, high RAM usage                  | Limit open tabs, clear cache, use lightweight extensions |
+| **Too Many Installed Programs** | Sluggish performance overall                      | Uninstall unused software                        |
+| **GPU or CPU Bottleneck**    | Low FPS in games, stuttering in high-load tasks       | Upgrade hardware or lower settings               |
+
+## 🛠️ Troubleshooting Printer Problems
+
+| 🧩 Issue                          | 🔍 Symptom / Description                            | 🛠️ Solution                                       |
+|----------------------------------|------------------------------------------------------|---------------------------------------------------|
+| **Printer Not Detected**         | PC can't find the printer (wired or wireless)        | Check cable/Wi-Fi, restart printer and PC, reinstall drivers |
+| **Paper Jam**                    | Paper stuck inside, error message on screen          | Open tray, gently remove jammed paper, check rollers |
+| **Low or Empty Ink/Toner**       | Faded or missing prints, ink warnings                | Replace or refill cartridge, reset ink counter     |
+| **Slow Printing**                | Pages take too long to print                         | Reduce resolution, disable duplex if not needed    |
+| **Printer Offline**              | Shows "Offline" even when powered on                 | Set as default printer, restart spooler, reconnect |
+| **Smudged or Streaky Prints**    | Ink smears or vertical lines on paper                | Clean print heads or rollers using maintenance tools |
+| **Wi-Fi Printing Issues**        | Won’t print over network                             | Reconnect to Wi-Fi, ensure IP hasn't changed       |
+| **Driver Errors**                | Installation fails, or printer malfunctions          | Reinstall or update drivers from manufacturer site |
+| **Wrong Paper Size**             | Printer cuts off or shrinks content                  | Set correct paper size in print settings           |
+| **Color Not Printing Correctly** | Colors appear off or not at all                      | Clean nozzles, check ink levels, align cartridges  |
+
+##  Blue Screen of Death (BSOD) – Causes & Fixes
+
+BSODs can be alarming, but they often point to specific issues. Below is a table of the most common causes, error codes, and how to troubleshoot them.
+
+---
+
+## 🔍 BSOD Error Table
+
+| 🧩 Cause                      | 💻 Common Error Code(s)                | 🛠️ Solution                                                      |
+|------------------------------|----------------------------------------|------------------------------------------------------------------|
+| **Driver Issues**            | `DRIVER_IRQL_NOT_LESS_OR_EQUAL`       | Update/reinstall device drivers (especially GPU, network, audio) |
+| **Faulty RAM**               | `MEMORY_MANAGEMENT`                   | Test RAM using Windows Memory Diagnostic or MemTest86            |
+| **Corrupt System Files**     | `CRITICAL_PROCESS_DIED`               | Run `sfc /scannow` and `DISM /Online /Cleanup-Image` commands     |
+| **Overheating/Hardware Fail**| `MACHINE_CHECK_EXCEPTION`             | Check cooling, fans, CPU/GPU temps, and thermal paste             |
+| **Storage Errors**           | `INACCESSIBLE_BOOT_DEVICE`            | Check SATA/SSD cables, run `chkdsk`, update storage drivers       |
+| **Faulty Updates**           | Varies                                 | Roll back or uninstall recent Windows or driver updates          |
+| **Overclocking Instability** | `CLOCK_WATCHDOG_TIMEOUT`              | Reset BIOS to default, disable overclocking                      |
+| **Malware or Rootkits**      | Varies                                 | Run full malware scan, check startup entries                     |
+| **Bad Power Supply (PSU)**   | Random BSODs, no specific code         | Test with a known-good PSU                                       |
+| **BIOS/Firmware Bugs**       | Varies                                 | Update BIOS/UEFI firmware and chipset drivers                    |
+
+## ⚡ What is POST?
+POST (Power-On Self-Test) is the initial diagnostic testing sequence your computer performs immediately after you power it on. It checks hardware components like CPU, RAM, GPU, storage devices, and peripherals to make sure everything is working correctly before the operating system loads.
+
+If POST detects a problem, it usually reports it through beep codes, error messages, or indicator lights, preventing the system from booting until the issue is fixed.
+
+### 🔍 POST vs BIOS vs Boot
+
+| Term       | What It Is                                         | When It Happens               | What It Does                                                |
+|------------|---------------------------------------------------|------------------------------|------------------------------------------------------------|
+| **POST**   | Power-On Self-Test — hardware diagnostic test     | Immediately after powering on | Checks hardware components (RAM, CPU, GPU, etc.) to ensure they work properly before loading anything else |
+| **BIOS**   | Basic Input/Output System — firmware on motherboard | After POST                   | Initializes hardware, configures devices, provides low-level system control, and starts the bootloader process |
+| **Boot**   | The process of loading the operating system        | After BIOS finishes          | Loads the OS from storage (HDD/SSD) into memory so you can use your computer |
+
+---
+# Day6
+## Safe mode:
+safe Mode is a special way to start your computer with only the most basic programs and drivers. It helps you fix problems like crashes, viruses, or software that won’t work right.
+
+ ### 🛡️ Types of Safe Mode
+
+| Type                         | What It Does                                            | When to Use                                           |
+|------------------------------|--------------------------------------------------------|-------------------------------------------------------|
+| **Safe Mode**                | Loads Windows with minimal drivers and no network      | Fix basic problems when internet is not needed        |
+| **Safe Mode with Networking** | Loads Safe Mode plus network drivers for internet access | When you need internet or network access to troubleshoot or download tools |
+| **Safe Mode with Command Prompt** | Opens Safe Mode with a command prompt window instead of desktop | For advanced users to run command-line troubleshooting |
+## How to acess safe mode
+Method 1: Using Settings
+Click Start and open Settings (gear icon).
+
+Go to Update & Security > Recovery.
+
+Under Advanced startup, click Restart now.
+
+After your PC restarts, select Troubleshoot > Advanced options > Startup Settings > Restart.
+
+When the list appears, press:
+
+4 for Safe Mode
+
+5 for Safe Mode with Networking
+
+6 for Safe Mode with Command Prompt
+
+# 🔧 Recovery Tools – 
+tools to repair , restore or reset the PC in any problem
+Purpose & Examples
+
+| Recovery Tool                  | Purpose                                      | Common Examples                      |
+|-------------------------------|----------------------------------------------|------------------------------------|
+| **System Restore**             | Revert system files and settings to an earlier point | Windows System Restore             |
+| **Startup Repair**             | Fix problems that prevent Windows from booting | Windows Startup Repair             |
+| **Safe Mode**                  | Start Windows with minimal drivers to troubleshoot issues | Safe Mode, Safe Mode with Networking |
+| **Command Prompt**             | Access command-line tools for advanced repairs | Windows Command Prompt             |
+| **System Image Recovery**      | Restore entire system from a backup image    | Windows System Image Recovery       |
+| **Reset This PC**              | Reinstall Windows, optionally keeping files  | Windows Reset                      |
+
+## What is OS Repair?
+OS Repair (Operating System Repair) is the process of fixing problems in your computer’s operating system (like Windows, macOS, or Linux) without completely reinstalling it.
+
+It helps resolve issues such as corrupted system files, startup problems, crashes, or errors that stop your computer from working properly.
+
+### When to Use OS Repair
+Your computer won’t start correctly
+
+You get frequent error messages or crashes
+
+Important system files are damaged or missing
+
+After a failed update or software installation
+
+### How OS Repair Works
+Repairs or replaces corrupted system files
+
+Fixes boot problems so your PC can start up
+
+Restores system settings to a working state
+
+## 🦠 What Are Virus and Malware?
+Term	Definition
+### Malware	Short for “malicious software,” malware is any software designed to harm your computer, steal data, or cause problems. It includes viruses, spyware, ransomware, trojans, and more.
+### Virus	A type of malware that can copy itself and spread to other files or computers, often causing damage or corrupting data.
+
+### Key Points
+All viruses are malware, but not all malware are viruses.
+
+Malware can do things like steal your passwords, spy on you, slow down your computer, or lock your files and demand ransom.
+
+## 🔌 What Are Plugins?
+Plugins are small software add-ons that add extra features or functions to a bigger program or application. Think of them as extensions that help customize or enhance how a program works.
+
+### Examples of Plugins
+|Program:	| What Plugins Do|
+|-------------|-------------------|
+|Web Browsers |	Add ad blockers, password managers, themes       |
+|WordPress	| Add contact forms, SEO tools, e-commerce features      | 
+|Video Editors|	Add new effects, transitions, or export options  |
+|Audio Software|	Add new instruments or sound effects             |
+
+Why Use Plugins?
+Add new features without changing the main software
+
+Customize the software to fit your needs
+
+Often easy to install and update
+
+## 💾 Backups: What, Why, and How
+### What is a Backup?
+A backup is a copy of your important files, settings, or entire system stored separately so you can restore them if your original data is lost or damaged.
+
+### Why Backup?
+|Reason	|Explanation  |
+|-------------|-------------|
+|Protect Against Data Loss |Prevent losing files due to accidental deletion, hardware failure, or corruption |
+|Recover from Malware| 	Restore files if ransomware or viruses encrypt or delete them        |
+|Undo Mistakes	| Retrieve previous versions if you overwrite or mess up files         | 
+|Hardware Failure|	Quickly recover if your hard drive or device breaks        | 
+|Easy Migration|	Move your data to a new computer without hassle       |
+
+How to Backup
+Method	Description	Examples
+Manual Copy	Copy files manually to another drive or USB	Copy important folders to external HDD or USB
+Cloud Backup	Save files to online storage	Google Drive, OneDrive, Dropbox
+Backup Software	Automated backup of files or whole system	Windows Backup, Mac Time Machine, Acronis
+System Image Backup	Create a full snapshot of your system	Windows System Image, Mac Disk Utility
+
+Backup Tips
+Backup Regularly: Set a schedule (daily, weekly) based on how often your data changes
+
+Use Multiple Locations: Keep backups both on external drives and in the cloud
+
+Test Your Backups: Occasionally check that you can restore files successfully
+
+Keep Versions: Save multiple copies to recover older versions if needed
+
+Encrypt Sensitive Data: Protect backups with passwords or encryption if they contain private info
+
+# 🔌 RJ45 Connector, Crimping Tools & Ethernet Cable
+
+| Term             | What It Is                                              | Purpose / Use                                         |
+|------------------|---------------------------------------------------------|------------------------------------------------------|
+| **RJ45 Connector**| A common 8-pin connector used for network cables        | Connects Ethernet cables to devices like computers, routers, and switches |
+| **Crimping Tool** | A hand tool used to attach RJ45 connectors to cables    | Cuts, strips, and crimps cable wires into the connector for a secure connection |
+| **Ethernet Cable**| Cable used to connect devices in a local network        | Transfers data between devices such as computers, routers, and modems |
 
 
-
-
-
-
-
-
-
-
-
-
+## How to make RJ45 cable:
+Strip the cable to remove 1 inch of the outer sheath.
+Untwist and straighten the wires inside of the cable
+Arrange the wires into the right order.
+|Pin|	Wire Color|
+|------|--------|
+|1	|White-Orange|
+|2	|orange|
+|3	|White-Green|
+|4|	Blue|
+|5|	White-Blue|
+|6|	Green|
+|7|	White-Brown|
+|8|	Brown|
+Trim the wires into an even line 1⁄2 inch (13 mm) from sheathing
+Insert the wires into the RJ-45 connector.
+Stick the connector into the crimping part of the tool and squeeze twice.
+Remove the cable from the tool and check that all of the pins are down & test the cable.
