@@ -455,4 +455,113 @@ Remove the cable from the tool and check that all of the pins are down & test 
 ## RJ45 Color combination pic:
 ![T568B](https://github.com/user-attachments/assets/ce8177b5-fe0c-4479-b0ca-12d94fb7dbff)
 
+# Day7
+
+## Networking basics:
+### Host:
+In networking, a host refers to any device (computer, smartphone, server, etc.) that is connected to a network and has an IP address. A host can send and receive data over a network, typically using the TCP/IP protocol.
+
+## 🔹 Client
+A client is a device or application that initiates communication by sending a request to a server to access a service or resource.
+
+Examples:
+
+A web browser (like Chrome) requesting a webpage.
+
+An email app retrieving new messages.
+
+A mobile app fetching data from an online database.
+
+## 🔹 Server
+A server is a device or program that waits for incoming requests from clients and provides the requested services or data.
+
+Examples:
+
+A web server (e.g., Apache, Nginx) hosting websites.
+
+A database server storing and providing access to data.
+
+A file server managing file storage and sharing.
+
+ ## What is a Network (in computing)?
+A network is a collection of two or more connected devices (called hosts or nodes) that can communicate with each other and share resources such as data, printers, internet access, etc.
+
+## What is an IP Address?
+An IP address (Internet Protocol address) is a unique identifier assigned to each device connected to a network. It allows devices to locate, communicate, and exchange data with each other over the internet or a local network.
+## This table shows the key differences between IPv4 and IPv6 in computer networking:
+
+| Feature                   | IPv4                                             | IPv6                                                  |
+|---------------------------|--------------------------------------------------|--------------------------------------------------------|
+| **Full Form**             | Internet Protocol version 4                     | Internet Protocol version 6                           |
+| **Address Size**          | 32-bit                                           | 128-bit                                                |
+| **Address Format**        | Decimal (e.g., `192.168.1.1`)                   | Hexadecimal (e.g., `2001:0db8:85a3::8a2e:0370:7334`)   |
+| **Total Addresses**       | ~4.3 billion                                     | ~340 undecillion (3.4 × 10³⁸)                         |
+| **Header Complexity**     | Simple header                                    | More efficient, complex header                        |
+| **Address Configuration** | Manual or via DHCP                               | Auto-config via SLAAC or DHCPv6                       |
+| **Security**              | Optional (via IPSec)                             | Mandatory (IPSec is built-in)                         |
+| **Broadcast Support**     | Supports broadcasting                            | No broadcasting (uses multicast instead)              |
+| **NAT (Address Translation)** | Commonly used to save IPs                   | Not needed due to vast address space                  |
+| **Compatibility**         | Widely used; legacy systems                      | Modern standard; adoption increasing                  |
+
+## What is Classful Addressing?
+Classful addressing is an old method of IP address allocation used in IPv4, where IP addresses were divided into five classes (A to E) based on the starting bits and network size. 
+
+#### Classful addressing is the traditional method used in IPv4 to divide the IP address space into five different classes (A to E).
+![OIP](https://github.com/user-attachments/assets/750bfacb-f544-47fe-8b14-c5b3ace4136a)
+
+| **Class** | **Starting Bits** | **Range (1st Octet)** | **Default Subnet Mask** | **# of Networks** | **# of Hosts per Network** | **Purpose**               |
+|-----------|-------------------|------------------------|--------------------------|--------------------|-----------------------------|---------------------------|
+| **A**     | 0                 | 1 – 126                | 255.0.0.0                | 128                | ~16 million                 | Large networks            |
+| **B**     | 10                | 128 – 191              | 255.255.0.0              | 16,384             | ~65,000                     | Medium networks           |
+| **C**     | 110               | 192 – 223              | 255.255.255.0            | 2 million+         | 254                         | Small networks            |
+| **D**     | 1110              | 224 – 239              | Not applicable           | -                  | -                           | Multicast (not unicast)   |
+| **E**     | 1111              | 240 – 255              | Not applicable           | -                  | -                           | Experimental/Reserved     |
+
+### What is Subnetting?
+Subnetting is the process of dividing a larger IP network into smaller, manageable subnetworks (subnets). It improves network performance, enhances security, and makes better use of IP addresses.
+
+### 🔹 Why Subnetting is Used:
+Efficient use of IP address space
+
+Isolates network segments (e.g., different departments)
+
+Reduces broadcast traffic
+
+Simplifies network management
+
+![OIP](https://github.com/user-attachments/assets/c1c57ba5-b813-4e22-bd48-872f0ff63f90)
+
+### 🔑 Key Terms in Subnetting
+
+| Term           | Description                                                      |
+|----------------|------------------------------------------------------------------|
+| **IP Address** | Unique identifier assigned to a device on a network (e.g., `192.168.1.10`) |
+| **Subnet Mask**| Defines which part of the IP address is the network and which is the host (e.g., `255.255.255.0`) |
+| **Network ID** | The portion of the IP address that identifies the subnet/network  |
+| **Host ID**    | The portion of the IP address that identifies a device within the subnet |
+| **CIDR Notation** | A shorthand for subnet masks using `/` followed by the number of network bits (e.g., `/24`) |
+| **Broadcast Address** | Special address used to communicate with all hosts on the subnet |
+| **Default Gateway** | The router IP address used to connect devices to other networks or the internet |
+
+| Term         | Full Form                 | Description                                                                                  |
+|--------------|---------------------------|----------------------------------------------------------------------------------------------|
+| **MAC**      | Media Access Control      | Unique hardware address of a device’s network interface, used for communication in local networks. Format example: `00:1A:2B:3C:4D:5E` |
+| **DNS**      | Domain Name System        | System that converts human-readable domain names into IP addresses, enabling web browsing and other internet services. |
+
+### Assignment of Broadcast, Unicast, and Multicast
+
+| Type       | Description                                                        | Example Usage                          |
+|------------|--------------------------------------------------------------------|---------------------------------------|
+| **Unicast**  | One-to-one communication; data sent to a specific device          | PC requesting a webpage from a server |
+| **Broadcast**| One-to-all communication; data sent to all devices in subnet      | ARP requests for MAC address discovery|
+| **Multicast**| One-to-many communication; data sent to a group of subscribed devices | Streaming live video to multiple viewers|
+
+
+
+
+
+
+
+
+
 
